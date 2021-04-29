@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
 </head>
+
 <body>
+    <section class="hero is-info">
+        <div class="hero-body">
+            <p class="title has-text-centered">
+                Weather Dashboard
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <div class="columns">
+            <div class="column is-one-third">
+                <input class="input is-large" type="text" placeholder="Search for City">
+                <button class="button is-info is-fullwidth">Search</button>
+            </div>
+            <section class="section">
+                <h2 id="city">
+                    <span id="name" class="city-info"></span>
+                    <span id="date" class="city-info"></span>
+                    <span id="icon" class="city-info"></span>
+                </h2>
+                <div id="city-weather">
+                    <div>Temp: <span id="temp" class="city-info"></span></div>
+                    <div>Wind: <span id="wind" class="city-info"></span></div>
+                    <div>Humidity: <span id="hum" class="city-info"></span></div>
+                    <div>UV index: <div id="uv" class="uv">0</div></div>
+                </div>
+            </section>
+        </div>
+        <div id="fiveDay">
+            <h3>5 Day Forecast:</h3>
+            <div id="fiveDay" class="city-info"></div>
+        </div>
+        
+    </main>
     <script src="./javascript.js"></script>
 </body>
+
 </html>
